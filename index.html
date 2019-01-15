@@ -119,6 +119,17 @@
     Your browser does not support the audio element.
 </audio>
 <script language="JavaScript">
+    // right click context menu
+    document.onmousedown=disableclick;
+status="Right Click Disabled";
+Function disableclick(e)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;	
+   }
+}
     //////////F12 disable code////////////////////////
     document.onkeypress = function (event) {
         event = (event || window.event);

@@ -121,7 +121,7 @@
 <script language="JavaScript">
     // right click context menu
     document.onmousedown=disableclick;
-status="Right Click Disabled";
+var status="Right Click Disabled";
 Function disableclick(e)
 {
   if(event.button==2)
@@ -130,6 +130,7 @@ Function disableclick(e)
      return false;	
    }
 }
+       document.addEventListener('contextmenu', event => event.preventDefault());
     //////////F12 disable code////////////////////////
     document.onkeypress = function (event) {
         event = (event || window.event);
